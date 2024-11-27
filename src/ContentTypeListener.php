@@ -9,7 +9,6 @@ use Laminas\EventManager\ListenerAggregateInterface;
 use Laminas\EventManager\ListenerAggregateTrait;
 use Laminas\Http\Request;
 use Laminas\Mvc\MvcEvent;
-use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Router\RouteMatch;
 
 use function array_reverse;
@@ -80,7 +79,7 @@ class ContentTypeListener implements ListenerAggregateInterface
     public function onRoute(MvcEvent $e)
     {
         $routeMatches = $e->getRouteMatch();
-        if (! ($routeMatches instanceof RouteMatch || $routeMatches instanceof V2RouteMatch)) {
+        if (! ($routeMatches instanceof RouteMatch)) {
             return;
         }
 
@@ -128,8 +127,7 @@ class ContentTypeListener implements ListenerAggregateInterface
     /**
      * Inject regex matches into the route matches
      *
-     * @param RouteMatch|V2RouteMatch $routeMatches
-     * @param array $matches
+     * @param RouteMatch $routeMatches
      */
     protected function injectRouteMatches($routeMatches, array $matches): void
     {

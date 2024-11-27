@@ -8,12 +8,16 @@ use Laminas\ApiTools\Versioning\ContentTypeListener;
 use Laminas\ApiTools\Versioning\Factory\ContentTypeListenerFactory;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
+use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use ReflectionClass;
 
 class ContentTypeListenerFactoryTest extends TestCase
 {
     use ProphecyTrait;
+
+    protected ObjectProphecy $container;
+    protected mixed $defaultRegexes;
 
     public function setUp(): void
     {

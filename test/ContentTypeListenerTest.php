@@ -16,6 +16,9 @@ class ContentTypeListenerTest extends TestCase
     use EventListenerIntrospectionTrait;
     use RouteMatchFactoryTrait;
 
+    protected ContentTypeListener $listener;
+    protected MvcEvent $event;
+
     public function setUp(): void
     {
         $this->event = new MvcEvent();
@@ -65,7 +68,7 @@ class ContentTypeListenerTest extends TestCase
      *     3: string
      * }>
      */
-    public function validDefaultContentTypes(): array
+    public static function validDefaultContentTypes(): array
     {
         return [
             [
@@ -104,7 +107,7 @@ class ContentTypeListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string}> */
-    public function invalidDefaultContentTypes(): array
+    public static function invalidDefaultContentTypes(): array
     {
         return [
             'bad-prefix'                   => ['application/vendor.mwop.v1.status'],
@@ -138,7 +141,7 @@ class ContentTypeListenerTest extends TestCase
      *     3: string
      * }>
      */
-    public function validCustomContentTypes(): array
+    public static function validCustomContentTypes(): array
     {
         return [
             [
@@ -186,7 +189,7 @@ class ContentTypeListenerTest extends TestCase
      *     1: array<string, string|int>
      * }>
      */
-    public function mixedContentTypes(): array
+    public static function mixedContentTypes(): array
     {
         return [
             'default' => [

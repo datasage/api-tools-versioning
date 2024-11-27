@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace LaminasTest\ApiTools\Versioning;
 
 use Laminas\ApiTools\Versioning\PrototypeRouteListener;
+use Laminas\ApiTools\Versioning\VersionListener;
 use Laminas\ModuleManager\Listener\ConfigListener;
 use Laminas\ModuleManager\ModuleEvent;
+use Laminas\Mvc\MvcEvent;
 use PHPUnit\Framework\TestCase;
 
 use function array_keys;
@@ -15,6 +17,10 @@ use function var_export;
 
 class PrototypeRouteListenerTest extends TestCase
 {
+    protected ModuleEvent $event;
+    protected ConfigListener $configListener;
+    protected array $config;
+
     public function setUp(): void
     {
         $this->config         = [
@@ -57,7 +63,7 @@ class PrototypeRouteListenerTest extends TestCase
     }
 
     /** @return array */
-    public function routesWithoutPrototype()
+    public static function routesWithoutPrototype()
     {
         return [
             'none'   => [[]],
@@ -69,7 +75,6 @@ class PrototypeRouteListenerTest extends TestCase
 
     /**
      * @dataProvider routesWithoutPrototype
-     * @param array $routes
      */
     public function testEmptyConfigurationDoesNotInjectPrototypes(array $routes): void
     {
@@ -90,7 +95,7 @@ class PrototypeRouteListenerTest extends TestCase
     }
 
     /** @return array */
-    public function routesForWhichToVerifyPrototype()
+    public static function routesForWhichToVerifyPrototype()
     {
         return [
             'status' => [['status'], 1],
@@ -146,7 +151,7 @@ class PrototypeRouteListenerTest extends TestCase
     }
 
     /** @return array */
-    public function defaultVersionValues()
+    public static function defaultVersionValues()
     {
         return [
             'v1'    => [1],
@@ -196,7 +201,7 @@ class PrototypeRouteListenerTest extends TestCase
     }
 
     /** @return array */
-    public function specificDefaultVersionForWhichToVerifyPrototype()
+    public static function specificDefaultVersionForWhichToVerifyPrototype()
     {
         return [
             'status'           => [['status' => 2]],
