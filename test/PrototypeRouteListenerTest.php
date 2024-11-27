@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace LaminasTest\ApiTools\Versioning;
 
 use Laminas\ApiTools\Versioning\PrototypeRouteListener;
-use Laminas\ApiTools\Versioning\VersionListener;
 use Laminas\ModuleManager\Listener\ConfigListener;
 use Laminas\ModuleManager\ModuleEvent;
-use Laminas\Mvc\MvcEvent;
 use PHPUnit\Framework\TestCase;
 
 use function array_keys;

@@ -79,7 +79,7 @@ class ContentTypeListener implements ListenerAggregateInterface
     public function onRoute(MvcEvent $e)
     {
         $routeMatches = $e->getRouteMatch();
-        if (! ($routeMatches instanceof RouteMatch)) {
+        if (! $routeMatches instanceof RouteMatch) {
             return;
         }
 

@@ -158,183 +158,71 @@
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="test/ContentTypeListenerTest.php">
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$key]]></code>
+    </MixedArgumentTypeCoercion>
     <MixedAssignment>
       <code><![CDATA[$expected]]></code>
       <code><![CDATA[$headers]]></code>
       <code><![CDATA[$headers]]></code>
       <code><![CDATA[$headers]]></code>
       <code><![CDATA[$headers]]></code>
-      <code><![CDATA[$request]]></code>
-      <code><![CDATA[$request]]></code>
-      <code><![CDATA[$request]]></code>
-      <code><![CDATA[$request]]></code>
-      <code><![CDATA[$routeMatch]]></code>
-      <code><![CDATA[$routeMatch]]></code>
-      <code><![CDATA[$routeMatch]]></code>
-      <code><![CDATA[$routeMatch]]></code>
     </MixedAssignment>
     <MixedMethodCall>
       <code><![CDATA[addHeaderLine]]></code>
       <code><![CDATA[addHeaderLine]]></code>
       <code><![CDATA[addHeaderLine]]></code>
       <code><![CDATA[addHeaderLine]]></code>
-      <code><![CDATA[addRegexp]]></code>
-      <code><![CDATA[addRegexp]]></code>
-      <code><![CDATA[attach]]></code>
-      <code><![CDATA[getHeaders]]></code>
-      <code><![CDATA[getHeaders]]></code>
-      <code><![CDATA[getHeaders]]></code>
-      <code><![CDATA[getHeaders]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getRequest]]></code>
-      <code><![CDATA[getRequest]]></code>
-      <code><![CDATA[getRequest]]></code>
-      <code><![CDATA[getRequest]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
     </MixedMethodCall>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->listener]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-    </UndefinedThisPropertyFetch>
+    <PossiblyNullReference>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+      <code><![CDATA[getParam]]></code>
+    </PossiblyNullReference>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+      <code><![CDATA[getHeaders]]></code>
+    </UndefinedInterfaceMethod>
   </file>
   <file src="test/Factory/AcceptListenerFactoryTest.php">
-    <MixedArgument>
+    <MixedArgumentTypeCoercion>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
-    </MixedArgument>
+    </MixedArgumentTypeCoercion>
     <MixedAssignment>
       <code><![CDATA[$regex]]></code>
     </MixedAssignment>
     <MixedInferredReturnType>
       <code><![CDATA[array]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </MixedMethodCall>
     <MixedReturnStatement>
       <code><![CDATA[$reflectionProperty->getValue($listener)]]></code>
     </MixedReturnStatement>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-    </UndefinedThisPropertyFetch>
     <UnusedMethodCall>
       <code><![CDATA[setAccessible]]></code>
     </UnusedMethodCall>
   </file>
   <file src="test/Factory/ContentTypeListenerFactoryTest.php">
-    <MixedArgument>
+    <MixedArgumentTypeCoercion>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
-    </MixedArgument>
+    </MixedArgumentTypeCoercion>
     <MixedAssignment>
       <code><![CDATA[$regex]]></code>
     </MixedAssignment>
     <MixedInferredReturnType>
       <code><![CDATA[array]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[reveal]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </MixedMethodCall>
     <MixedReturnStatement>
       <code><![CDATA[$reflectionProperty->getValue($listener)]]></code>
     </MixedReturnStatement>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->container]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-      <code><![CDATA[$this->defaultRegexes]]></code>
-    </UndefinedThisPropertyFetch>
     <UnusedMethodCall>
       <code><![CDATA[setAccessible]]></code>
     </UnusedMethodCall>
@@ -348,9 +236,6 @@
     </DeprecatedClass>
     <MixedArgument>
       <code><![CDATA[$config['service_manager']]]></code>
-      <code><![CDATA[$this->app]]></code>
-      <code><![CDATA[$this->events]]></code>
-      <code><![CDATA[$this->services]]></code>
     </MixedArgument>
     <MixedArrayAccess>
       <code><![CDATA[$config['service_manager']]]></code>
@@ -359,24 +244,6 @@
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$listener]]></code>
     </MixedAssignment>
-    <MixedMethodCall>
-      <code><![CDATA[getPrototypeRouteListener]]></code>
-      <code><![CDATA[init]]></code>
-      <code><![CDATA[onBootstrap]]></code>
-    </MixedMethodCall>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->app]]></code>
-      <code><![CDATA[$this->events]]></code>
-      <code><![CDATA[$this->module]]></code>
-      <code><![CDATA[$this->services]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->app]]></code>
-      <code><![CDATA[$this->events]]></code>
-      <code><![CDATA[$this->module]]></code>
-      <code><![CDATA[$this->module]]></code>
-      <code><![CDATA[$this->services]]></code>
-    </UndefinedThisPropertyFetch>
   </file>
   <file src="test/PrototypeRouteListenerTest.php">
     <InvalidArrayOffset>
@@ -410,10 +277,6 @@
       <code><![CDATA[$routesConfig]]></code>
       <code><![CDATA[$this->config['router']['routes']]]></code>
       <code><![CDATA[$this->config['router']['routes']]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
     </MixedArgument>
     <MixedArgumentTypeCoercion>
       <code><![CDATA[$routeName]]></code>
@@ -429,17 +292,9 @@
       <code><![CDATA[$routerConfig['routes']]]></code>
       <code><![CDATA[$routerConfig['routes']]]></code>
       <code><![CDATA[$routerConfig['routes']]]></code>
-      <code><![CDATA[$this->config['router']]]></code>
-      <code><![CDATA[$this->config['router']]]></code>
       <code><![CDATA[$this->config['router']['routes']]]></code>
       <code><![CDATA[$this->config['router']['routes']]]></code>
     </MixedArrayAccess>
-    <MixedArrayAssignment>
-      <code><![CDATA[$this->config['api-tools-versioning']]]></code>
-      <code><![CDATA[$this->config['api-tools-versioning']]]></code>
-      <code><![CDATA[$this->config['api-tools-versioning']]]></code>
-      <code><![CDATA[$this->config['api-tools-versioning']]]></code>
-    </MixedArrayAssignment>
     <MixedAssignment>
       <code><![CDATA[$apiVersion]]></code>
       <code><![CDATA[$config]]></code>
@@ -464,15 +319,6 @@
       <code><![CDATA[$routesConfig]]></code>
       <code><![CDATA[$routesConfig]]></code>
     </MixedAssignment>
-    <MixedMethodCall>
-      <code><![CDATA[getMergedConfig]]></code>
-      <code><![CDATA[getMergedConfig]]></code>
-      <code><![CDATA[getMergedConfig]]></code>
-      <code><![CDATA[getMergedConfig]]></code>
-      <code><![CDATA[setMergedConfig]]></code>
-      <code><![CDATA[setMergedConfig]]></code>
-      <code><![CDATA[setMergedConfig]]></code>
-    </MixedMethodCall>
     <MixedReturnStatement>
       <code><![CDATA[array]]></code>
       <code><![CDATA[array]]></code>
@@ -482,28 +328,6 @@
     <RiskyTruthyFalsyComparison>
       <code><![CDATA[empty($apiVersion)]]></code>
     </RiskyTruthyFalsyComparison>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->configListener]]></code>
-      <code><![CDATA[$this->event]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->config]]></code>
-      <code><![CDATA[$this->configListener]]></code>
-      <code><![CDATA[$this->configListener]]></code>
-      <code><![CDATA[$this->configListener]]></code>
-      <code><![CDATA[$this->configListener]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-    </UndefinedThisPropertyFetch>
   </file>
   <file src="test/RouteMatchFactoryTrait.php">
     <InvalidStringClass>
@@ -518,61 +342,14 @@
       <code><![CDATA[$this->getRouteMatchClass()]]></code>
       <code><![CDATA[$this->getRouteMatchClass()]]></code>
     </ArgumentTypeCoercion>
-    <MixedAssignment>
-      <code><![CDATA[$matches]]></code>
-      <code><![CDATA[$matches]]></code>
-      <code><![CDATA[$matches]]></code>
-      <code><![CDATA[$matches]]></code>
-      <code><![CDATA[$matches]]></code>
-      <code><![CDATA[$result]]></code>
-      <code><![CDATA[$result]]></code>
-    </MixedAssignment>
-    <MixedMethodCall>
-      <code><![CDATA[attach]]></code>
+    <PossiblyNullReference>
       <code><![CDATA[getParam]]></code>
       <code><![CDATA[getParam]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[getRouteMatch]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
-      <code><![CDATA[onRoute]]></code>
       <code><![CDATA[setParam]]></code>
       <code><![CDATA[setParam]]></code>
       <code><![CDATA[setParam]]></code>
       <code><![CDATA[setParam]]></code>
       <code><![CDATA[setParam]]></code>
-      <code><![CDATA[setParam]]></code>
-      <code><![CDATA[setParam]]></code>
-      <code><![CDATA[setParam]]></code>
-      <code><![CDATA[setParam]]></code>
-      <code><![CDATA[setRequest]]></code>
-    </MixedMethodCall>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->listener]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-      <code><![CDATA[$this->listener]]></code>
-    </UndefinedThisPropertyFetch>
+    </PossiblyNullReference>
   </file>
 </files>
