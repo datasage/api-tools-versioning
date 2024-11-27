@@ -8,12 +8,16 @@ use Laminas\ApiTools\Versioning\AcceptListener;
 use Laminas\ApiTools\Versioning\Factory\AcceptListenerFactory;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
+use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use ReflectionClass;
 
 class AcceptListenerFactoryTest extends TestCase
 {
     use ProphecyTrait;
+
+    protected ObjectProphecy $container;
+    protected mixed $defaultRegexes;
 
     public function setUp(): void
     {
