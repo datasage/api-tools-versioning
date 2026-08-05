@@ -82,7 +82,6 @@ class ContentTypeListenerFactoryTest extends TestCase
     {
         $reflectionClass    = new ReflectionClass(ContentTypeListener::class);
         $reflectionProperty = $reflectionClass->getProperty('regexes');
-        $reflectionProperty->setAccessible(true);
 
         return $reflectionProperty->getValue($listener);
     }

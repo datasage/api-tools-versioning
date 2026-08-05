@@ -82,7 +82,6 @@ class AcceptListenerFactoryTest extends TestCase
     {
         $reflectionClass    = new ReflectionClass(AcceptListener::class);
         $reflectionProperty = $reflectionClass->getProperty('regexes');
-        $reflectionProperty->setAccessible(true);
 
         return $reflectionProperty->getValue($listener);
     }
