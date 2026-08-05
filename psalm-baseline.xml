@@ -265,9 +265,6 @@
       <code><![CDATA[has]]></code>
       <code><![CDATA[has]]></code>
     </UndefinedMagicMethod>
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
   </file>
   <file src="test/Factory/ContentTypeListenerFactoryTest.php">
     <ArgumentTypeCoercion>
@@ -306,9 +303,6 @@
       <code><![CDATA[has]]></code>
       <code><![CDATA[has]]></code>
     </UndefinedMagicMethod>
-    <UnusedMethodCall>
-      <code><![CDATA[setAccessible]]></code>
-    </UnusedMethodCall>
   </file>
   <file src="test/ModuleTest.php">
     <ArgumentTypeCoercion>
