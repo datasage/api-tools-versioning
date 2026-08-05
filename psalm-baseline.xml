@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+<files psalm-version="6.16.1@f1f5de594dc76faf8784e02d3dc4716c91c6f6ac">
   <file src="src/AcceptListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptListener]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function parseHeaderForMatches($value)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$regex]]></code>
     </MixedArgument>
@@ -12,6 +18,9 @@
     <DocblockTypeContradiction>
       <code><![CDATA[is_string($regex)]]></code>
     </DocblockTypeContradiction>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$header->getFieldValue()]]></code>
       <code><![CDATA[$regex]]></code>
@@ -42,7 +51,15 @@
       <code><![CDATA[is_object($regex)]]></code>
     </TypeDoesNotContainType>
   </file>
+  <file src="src/Exception/InvalidArgumentException.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InvalidArgumentException]]></code>
+    </ClassMustBeFinal>
+  </file>
   <file src="src/Factory/AcceptListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptListenerFactory]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$regexp]]></code>
     </MixedArgument>
@@ -57,6 +74,9 @@
     </MixedAssignment>
   </file>
   <file src="src/Factory/ContentTypeListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeListenerFactory]]></code>
+    </ClassMustBeFinal>
     <MixedArgument>
       <code><![CDATA[$regexp]]></code>
     </MixedArgument>
@@ -71,12 +91,12 @@
     </MixedAssignment>
   </file>
   <file src="src/Module.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Module]]></code>
+    </ClassMustBeFinal>
     <MissingConstructor>
       <code><![CDATA[$prototypeRouteListener]]></code>
     </MissingConstructor>
-    <MixedInferredReturnType>
-      <code><![CDATA[array]]></code>
-    </MixedInferredReturnType>
     <MixedMethodCall>
       <code><![CDATA[attach]]></code>
       <code><![CDATA[attach]]></code>
@@ -85,11 +105,20 @@
     <MixedReturnStatement>
       <code><![CDATA[include __DIR__ . '/../config/module.config.php']]></code>
     </MixedReturnStatement>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[getConfig]]></code>
+    </PossiblyUnusedMethod>
     <RedundantConditionGivenDocblockType>
       <code><![CDATA[$this->prototypeRouteListener]]></code>
     </RedundantConditionGivenDocblockType>
   </file>
   <file src="src/PrototypeRouteListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PrototypeRouteListener]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['router']['routes'][$routeName]['options']]]></code>
       <code><![CDATA[$config['router']['routes'][$routeName]['options']['route']]]></code>
@@ -138,6 +167,12 @@
     </UnusedVariable>
   </file>
   <file src="src/VersionListener.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[VersionListener]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$controller]]></code>
       <code><![CDATA[$controller]]></code>
@@ -146,9 +181,6 @@
       <code><![CDATA[$controller]]></code>
       <code><![CDATA[$version]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[int|false]]></code>
-    </MixedInferredReturnType>
     <MixedReturnStatement>
       <code><![CDATA[$routeMatches->getParam('version', false)]]></code>
       <code><![CDATA[$version]]></code>
@@ -158,6 +190,12 @@
     </RiskyTruthyFalsyComparison>
   </file>
   <file src="test/ContentTypeListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeListenerTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgumentTypeCoercion>
       <code><![CDATA[$key]]></code>
     </MixedArgumentTypeCoercion>
@@ -180,6 +218,9 @@
       <code><![CDATA[getParam]]></code>
       <code><![CDATA[getParam]]></code>
     </PossiblyNullReference>
+    <PossiblyUnusedParam>
+      <code><![CDATA[$vendor]]></code>
+    </PossiblyUnusedParam>
     <UndefinedInterfaceMethod>
       <code><![CDATA[getHeaders]]></code>
       <code><![CDATA[getHeaders]]></code>
@@ -188,41 +229,83 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="test/Factory/AcceptListenerFactoryTest.php">
-    <MixedArgumentTypeCoercion>
+    <ArgumentTypeCoercion>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
-    </MixedArgumentTypeCoercion>
+    </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[AcceptListenerFactoryTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$regex]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[array]]></code>
-    </MixedInferredReturnType>
+    <MixedMethodCall>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+    </MixedMethodCall>
     <MixedReturnStatement>
       <code><![CDATA[$reflectionProperty->getValue($listener)]]></code>
     </MixedReturnStatement>
+    <UndefinedMagicMethod>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+    </UndefinedMagicMethod>
     <UnusedMethodCall>
       <code><![CDATA[setAccessible]]></code>
     </UnusedMethodCall>
   </file>
   <file src="test/Factory/ContentTypeListenerFactoryTest.php">
-    <MixedArgumentTypeCoercion>
+    <ArgumentTypeCoercion>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
       <code><![CDATA[$this->container->reveal()]]></code>
-    </MixedArgumentTypeCoercion>
+    </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentTypeListenerFactoryTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$regex]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[array]]></code>
-    </MixedInferredReturnType>
+    <MixedMethodCall>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+    </MixedMethodCall>
     <MixedReturnStatement>
       <code><![CDATA[$reflectionProperty->getValue($listener)]]></code>
     </MixedReturnStatement>
+    <UndefinedMagicMethod>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[get]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+      <code><![CDATA[has]]></code>
+    </UndefinedMagicMethod>
     <UnusedMethodCall>
       <code><![CDATA[setAccessible]]></code>
     </UnusedMethodCall>
@@ -231,9 +314,15 @@
     <ArgumentTypeCoercion>
       <code><![CDATA[$events]]></code>
     </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[ModuleTest]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[new Config($config['service_manager'])]]></code>
     </DeprecatedClass>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['service_manager']]]></code>
     </MixedArgument>
@@ -246,9 +335,15 @@
     </MixedAssignment>
   </file>
   <file src="test/PrototypeRouteListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[PrototypeRouteListenerTest]]></code>
+    </ClassMustBeFinal>
     <InvalidArrayOffset>
       <code><![CDATA[$defaultVersions[$routeName]]]></code>
     </InvalidArrayOffset>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$config]]></code>
@@ -268,8 +363,6 @@
       <code><![CDATA[$routeConfig]]></code>
       <code><![CDATA[$routeConfig]]></code>
       <code><![CDATA[$routeConfig]]></code>
-      <code><![CDATA[$routeName]]></code>
-      <code><![CDATA[$routeName]]></code>
       <code><![CDATA[$routerConfig]]></code>
       <code><![CDATA[$routesConfig]]></code>
       <code><![CDATA[$routesConfig]]></code>
@@ -278,10 +371,6 @@
       <code><![CDATA[$this->config['router']['routes']]]></code>
       <code><![CDATA[$this->config['router']['routes']]]></code>
     </MixedArgument>
-    <MixedArgumentTypeCoercion>
-      <code><![CDATA[$routeName]]></code>
-      <code><![CDATA[$routeName]]></code>
-    </MixedArgumentTypeCoercion>
     <MixedArrayAccess>
       <code><![CDATA[$options['constraints']['version']]]></code>
       <code><![CDATA[$options['constraints']['version']]]></code>
@@ -295,6 +384,10 @@
       <code><![CDATA[$this->config['router']['routes']]]></code>
       <code><![CDATA[$this->config['router']['routes']]]></code>
     </MixedArrayAccess>
+    <MixedArrayOffset>
+      <code><![CDATA[$routesConfig[$routeName]]]></code>
+      <code><![CDATA[$routesConfig[$routeName]]]></code>
+    </MixedArrayOffset>
     <MixedAssignment>
       <code><![CDATA[$apiVersion]]></code>
       <code><![CDATA[$config]]></code>
@@ -337,11 +430,32 @@
       <code><![CDATA[RouteMatch]]></code>
     </MoreSpecificReturnType>
   </file>
+  <file src="test/TestAsset/Application.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[Application]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getEventManager()]]></code>
+      <code><![CDATA[public function getRequest()]]></code>
+      <code><![CDATA[public function getResponse()]]></code>
+      <code><![CDATA[public function getServiceManager()]]></code>
+      <code><![CDATA[public function run()]]></code>
+    </MissingOverrideAttribute>
+  </file>
   <file src="test/VersionListenerTest.php">
     <ArgumentTypeCoercion>
       <code><![CDATA[$this->getRouteMatchClass()]]></code>
       <code><![CDATA[$this->getRouteMatchClass()]]></code>
     </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[VersionListenerTest]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function setUp(): void]]></code>
+    </MissingOverrideAttribute>
+    <MixedMethodCall>
+      <code><![CDATA[shouldNotBeCalled]]></code>
+    </MixedMethodCall>
     <PossiblyNullReference>
       <code><![CDATA[getParam]]></code>
       <code><![CDATA[getParam]]></code>
@@ -351,5 +465,8 @@
       <code><![CDATA[setParam]]></code>
       <code><![CDATA[setParam]]></code>
     </PossiblyNullReference>
+    <UndefinedMagicMethod>
+      <code><![CDATA[isOptions]]></code>
+    </UndefinedMagicMethod>
   </file>
 </files>
