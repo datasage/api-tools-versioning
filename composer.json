@@ -36,7 +36,7 @@
         "laminas/laminas-eventmanager": "^3.15",
         "laminas/laminas-http": "^2.23",
         "laminas/laminas-modulemanager": "^2.19",
-        "laminas/laminas-mvc": "^3.9",
+        "laminas/laminas-mvc": "^3.8",
         "laminas/laminas-router": "^3.16",
         "laminas/laminas-servicemanager": "^3.24",
         "laminas/laminas-stdlib": "^3.21",
