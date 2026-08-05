@@ -33,13 +33,13 @@
     },
     "require": {
         "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
-        "laminas/laminas-eventmanager": "^3.2",
-        "laminas/laminas-http": "^2.5.4",
-        "laminas/laminas-modulemanager": "^2.7.2",
-        "laminas/laminas-mvc": "^3.0.2",
-        "laminas/laminas-router": "^3.11",
-        "laminas/laminas-servicemanager": "^3.11",
-        "laminas/laminas-stdlib": "^3.0.1",
+        "laminas/laminas-eventmanager": "^3.15",
+        "laminas/laminas-http": "^2.23",
+        "laminas/laminas-modulemanager": "^2.19",
+        "laminas/laminas-mvc": "^3.9",
+        "laminas/laminas-router": "^3.16",
+        "laminas/laminas-servicemanager": "^3.24",
+        "laminas/laminas-stdlib": "^3.21",
         "psr/container": "^1.1 || ^2.0"
     },
     "require-dev": {
@@ -72,5 +72,11 @@
     },
     "conflict": {
         "zfcampus/zf-versioning": "*"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/datasage/laminas-mvc"
+        }
+    ]
 }
