@@ -10,6 +10,7 @@ use Laminas\EventManager\ListenerAggregateTrait;
 use Laminas\ModuleManager\Listener\ConfigListener;
 use Laminas\ModuleManager\ModuleEvent;
 use Laminas\Stdlib\ArrayUtils;
+use Override;
 
 use function array_shift;
 use function explode;
@@ -49,6 +50,7 @@ class PrototypeRouteListener implements ListenerAggregateInterface
      *
      * @param int $priority
      */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(ModuleEvent::EVENT_MERGE_CONFIG, [$this, 'onMergeConfig']);

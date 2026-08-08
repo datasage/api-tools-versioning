@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Laminas\ApiTools\Versioning;
 
+use Override;
+
 use function array_reverse;
 use function array_shift;
 use function explode;
@@ -24,6 +26,7 @@ class AcceptListener extends ContentTypeListener
      * @param  string $value
      * @return false|array
      */
+    #[Override]
     protected function parseHeaderForMatches($value)
     {
         // Accept header is made up of media ranges

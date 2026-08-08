@@ -16,6 +16,7 @@ use Laminas\ModuleManager\ModuleManager;
 use Laminas\Mvc\MvcEvent;
 use Laminas\ServiceManager\Config;
 use Laminas\ServiceManager\ServiceManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 
 use function sprintf;
@@ -29,6 +30,7 @@ class ModuleTest extends TestCase
     protected EventManager $events;
     protected Module $module;
 
+    #[Override]
     public function setUp(): void
     {
         $this->app      = new TestAsset\Application();

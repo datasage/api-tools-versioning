@@ -9,6 +9,7 @@ use Laminas\Mvc\ApplicationInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
 use Laminas\Stdlib\RequestInterface;
 use Laminas\Stdlib\ResponseInterface;
+use Override;
 
 /** @psalm-suppress MissingConstructor */
 class Application implements ApplicationInterface
@@ -30,12 +31,14 @@ class Application implements ApplicationInterface
     }
 
     /** @return ServiceLocatorInterface */
+    #[Override]
     public function getServiceManager()
     {
         return $this->services;
     }
 
     /** @return EventManagerInterface */
+    #[Override]
     public function getEventManager()
     {
         return $this->events;
@@ -49,6 +52,7 @@ class Application implements ApplicationInterface
      *
      * @return RequestInterface
      */
+    #[Override]
     public function getRequest()
     {
     }
@@ -58,6 +62,7 @@ class Application implements ApplicationInterface
      *
      * @return ResponseInterface
      */
+    #[Override]
     public function getResponse()
     {
     }
@@ -67,6 +72,7 @@ class Application implements ApplicationInterface
      *
      * @return self
      */
+    #[Override]
     public function run()
     {
     }

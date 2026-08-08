@@ -4,9 +4,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[AcceptListener]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function parseHeaderForMatches($value)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$regex]]></code>
     </MixedArgument>
@@ -18,9 +15,6 @@
     <DocblockTypeContradiction>
       <code><![CDATA[is_string($regex)]]></code>
     </DocblockTypeContradiction>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$header->getFieldValue()]]></code>
       <code><![CDATA[$regex]]></code>
@@ -116,9 +110,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[PrototypeRouteListener]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['router']['routes'][$routeName]['options']]]></code>
       <code><![CDATA[$config['router']['routes'][$routeName]['options']['route']]]></code>
@@ -170,9 +161,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[VersionListener]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$controller]]></code>
       <code><![CDATA[$controller]]></code>
@@ -193,9 +181,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[ContentTypeListenerTest]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgumentTypeCoercion>
       <code><![CDATA[$key]]></code>
     </MixedArgumentTypeCoercion>
@@ -238,9 +223,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[AcceptListenerFactoryTest]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$regex]]></code>
     </MixedAssignment>
@@ -276,9 +258,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[ContentTypeListenerFactoryTest]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$regex]]></code>
     </MixedAssignment>
@@ -314,9 +293,6 @@
     <DeprecatedClass>
       <code><![CDATA[new Config($config['service_manager'])]]></code>
     </DeprecatedClass>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['service_manager']]]></code>
     </MixedArgument>
@@ -335,9 +311,6 @@
     <InvalidArrayOffset>
       <code><![CDATA[$defaultVersions[$routeName]]]></code>
     </InvalidArrayOffset>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$config]]></code>
@@ -365,6 +338,12 @@
       <code><![CDATA[$this->config['router']['routes']]]></code>
       <code><![CDATA[$this->config['router']['routes']]]></code>
     </MixedArgument>
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$options]]></code>
+      <code><![CDATA[$options]]></code>
+      <code><![CDATA[$options]]></code>
+      <code><![CDATA[$options]]></code>
+    </MixedArgumentTypeCoercion>
     <MixedArrayAccess>
       <code><![CDATA[$options['constraints']['version']]]></code>
       <code><![CDATA[$options['constraints']['version']]]></code>
@@ -428,13 +407,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[Application]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function getEventManager()]]></code>
-      <code><![CDATA[public function getRequest()]]></code>
-      <code><![CDATA[public function getResponse()]]></code>
-      <code><![CDATA[public function getServiceManager()]]></code>
-      <code><![CDATA[public function run()]]></code>
-    </MissingOverrideAttribute>
   </file>
   <file src="test/VersionListenerTest.php">
     <ArgumentTypeCoercion>
@@ -444,9 +416,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[VersionListenerTest]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedMethodCall>
       <code><![CDATA[shouldNotBeCalled]]></code>
     </MixedMethodCall>
