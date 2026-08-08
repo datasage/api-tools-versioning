@@ -9,6 +9,7 @@ use Laminas\EventManager\ListenerAggregateInterface;
 use Laminas\EventManager\ListenerAggregateTrait;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Router\RouteMatch;
+use Override;
 
 use function preg_match;
 use function preg_quote;
@@ -21,6 +22,7 @@ class VersionListener implements ListenerAggregateInterface
     /**
      * {@inheritDoc}
      */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(MvcEvent::EVENT_ROUTE, [$this, 'onRoute'], -41);

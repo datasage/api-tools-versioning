@@ -6,6 +6,7 @@ namespace LaminasTest\ApiTools\Versioning\Factory;
 
 use Laminas\ApiTools\Versioning\AcceptListener;
 use Laminas\ApiTools\Versioning\Factory\AcceptListenerFactory;
+use Override;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -19,6 +20,7 @@ class AcceptListenerFactoryTest extends TestCase
     protected ObjectProphecy $container;
     protected mixed $defaultRegexes;
 
+    #[Override]
     public function setUp(): void
     {
         $this->container = $this->prophesize(ContainerInterface::class);

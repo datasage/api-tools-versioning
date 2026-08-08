@@ -6,6 +6,7 @@ namespace LaminasTest\ApiTools\Versioning\Factory;
 
 use Laminas\ApiTools\Versioning\ContentTypeListener;
 use Laminas\ApiTools\Versioning\Factory\ContentTypeListenerFactory;
+use Override;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -19,6 +20,7 @@ class ContentTypeListenerFactoryTest extends TestCase
     protected ObjectProphecy $container;
     protected mixed $defaultRegexes;
 
+    #[Override]
     public function setUp(): void
     {
         $this->container = $this->prophesize(ContainerInterface::class);

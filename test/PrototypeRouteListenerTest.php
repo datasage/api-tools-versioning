@@ -7,6 +7,8 @@ namespace LaminasTest\ApiTools\Versioning;
 use Laminas\ApiTools\Versioning\PrototypeRouteListener;
 use Laminas\ModuleManager\Listener\ConfigListener;
 use Laminas\ModuleManager\ModuleEvent;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 use function array_keys;
@@ -19,6 +21,7 @@ class PrototypeRouteListenerTest extends TestCase
     protected ConfigListener $configListener;
     protected array $config;
 
+    #[Override]
     public function setUp(): void
     {
         $this->config         = [
@@ -71,9 +74,7 @@ class PrototypeRouteListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider routesWithoutPrototype
-     */
+    #[DataProvider('routesWithoutPrototype')]
     public function testEmptyConfigurationDoesNotInjectPrototypes(array $routes): void
     {
         $listener = new PrototypeRouteListener();
@@ -104,10 +105,10 @@ class PrototypeRouteListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider routesForWhichToVerifyPrototype
      * @param int|null $apiVersion
      * @param int $position
      */
+    #[DataProvider('routesForWhichToVerifyPrototype')]
     public function testPrototypeAddedToRoutesProvidedToListener(array $routes, $apiVersion = null, $position = 0): void
     {
         $this->config['api-tools-versioning'] = [
@@ -159,9 +160,9 @@ class PrototypeRouteListenerTest extends TestCase
     }
 
     /**
-     * @dataProvider defaultVersionValues
      * @param int|null $apiVersion
      */
+    #[DataProvider('defaultVersionValues')]
     public function testPrototypeAddedToRoutesWithDefaultVersion($apiVersion = null): void
     {
         $routes                               = array_keys($this->config['router']['routes']);
@@ -208,9 +209,7 @@ class PrototypeRouteListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider specificDefaultVersionForWhichToVerifyPrototype
-     */
+    #[DataProvider('specificDefaultVersionForWhichToVerifyPrototype')]
     public function testPrototypeAddedToRoutesWithSpecificDefaultVersion(array $defaultVersions): void
     {
         $routes                               = array_keys($this->config['router']['routes']);

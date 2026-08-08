@@ -9,6 +9,8 @@ use Laminas\EventManager\EventManager;
 use Laminas\EventManager\Test\EventListenerIntrospectionTrait;
 use Laminas\Http\Request;
 use Laminas\Mvc\MvcEvent;
+use Override;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 
@@ -21,6 +23,7 @@ class VersionListenerTest extends TestCase
     protected MvcEvent $event;
     protected VersionListener $listener;
 
+    #[Override]
     public function setUp(): void
     {
         $this->event = new MvcEvent();
@@ -86,9 +89,7 @@ class VersionListenerTest extends TestCase
         $this->assertEquals('Foo\V2\Rest\Bar\Controller', $result->getParam('controller'));
     }
 
-    /**
-     * @group 12
-     */
+    #[Group('12')]
     public function testAltersControllerVersionNamespaceToReflectVersionForOptionsRequests(): void
     {
         $request = $this->prophesize(Request::class);

@@ -10,6 +10,7 @@ use Laminas\EventManager\ListenerAggregateTrait;
 use Laminas\Http\Request;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Router\RouteMatch;
+use Override;
 
 use function array_reverse;
 use function array_shift;
@@ -47,6 +48,7 @@ class ContentTypeListener implements ListenerAggregateInterface
     /**
      * {@inheritDoc}
      */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(MvcEvent::EVENT_ROUTE, [$this, 'onRoute'], -40);

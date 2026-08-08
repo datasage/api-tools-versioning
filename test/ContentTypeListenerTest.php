@@ -9,6 +9,8 @@ use Laminas\EventManager\EventManager;
 use Laminas\EventManager\Test\EventListenerIntrospectionTrait;
 use Laminas\Http\Request;
 use Laminas\Mvc\MvcEvent;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class ContentTypeListenerTest extends TestCase
@@ -19,6 +21,7 @@ class ContentTypeListenerTest extends TestCase
     protected ContentTypeListener $listener;
     protected MvcEvent $event;
 
+    #[Override]
     public function setUp(): void
     {
         $this->event = new MvcEvent();
@@ -86,9 +89,7 @@ class ContentTypeListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider validDefaultContentTypes
-     */
+    #[DataProvider('validDefaultContentTypes')]
     public function testInjectsRouteMatchesWhenContentTypeMatchesDefaultRegexp(
         string $header,
         string $vendor,
@@ -117,9 +118,7 @@ class ContentTypeListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider invalidDefaultContentTypes
-     */
+    #[DataProvider('invalidDefaultContentTypes')]
     public function testInjectsNothingIntoRouteMatchesWhenContentTypeDoesNotMatchDefaultRegexp(string $header): void
     {
         $request = $this->event->getRequest();
@@ -159,9 +158,7 @@ class ContentTypeListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider validCustomContentTypes
-     */
+    #[DataProvider('validCustomContentTypes')]
     public function testWillInjectRouteMatchesWhenContentTypeMatchesCustomRegexp(
         string $header,
         string $vendor,
@@ -211,9 +208,7 @@ class ContentTypeListenerTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider mixedContentTypes
-     */
+    #[DataProvider('mixedContentTypes')]
     public function testWillInjectRouteMatchesForFirstRegexpToMatch(string $header, array $matches): void
     {
         $this->listener->addRegexp('#application/vnd\.(?<vendor>mwop)\.(?<version>\d+)\.(?<resource>(?:user|status))#');
